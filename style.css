@@ -1,0 +1,83 @@
+html {box-sizing: border-box;}
+*, *:before, *:after{box-sizing: inherit;}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+
+.container{
+  background-color: lightcoral;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calender{
+  background-color:maroon;
+  color: lightgray;
+  width: 440px;
+  height: 550px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,.7);
+  
+  user-select: none;
+}
+
+.month{
+  background-color: darkcyan;
+  border-radius: 9px 9px 0 0;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.date h1{
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.date p{
+  font-size: 16px;
+}
+
+.weekdays{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 20px 0;
+}
+
+.weekdays div{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.days{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.days div{
+  text-align: center;
+  padding: 20px 0;
+}
+
+.days div:hover:not(.empty){                       /* STAR */
+  background-color: rgba(165, 42, 42, 0.807);
+  border-radius: 2px;
+}
+
+.today{
+  background-color: darkcyan;
+  border-radius: 2px;
+}
